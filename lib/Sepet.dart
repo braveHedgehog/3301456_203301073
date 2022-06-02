@@ -3,8 +3,6 @@ import 'package:hayvan_dostu/AdresEkrani.dart';
 import 'package:hayvan_dostu/UrunDetay.dart';
 import 'package:hayvan_dostu/main.dart';
 import 'package:hayvan_dostu/girisYap.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hayvan_dostu/Profil.dart';
 import 'package:hayvan_dostu/Urunler.dart';
 
@@ -18,42 +16,6 @@ class Sepet extends StatefulWidget {
 
   @override
   State<Sepet> createState() => _SepetState();
-}
-
-_launchURLFace() async {
-  const url = 'https://tr-tr.facebook.com/';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
-
-_launchURLInsta() async {
-  const url = 'https://www.instagram.com//';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
-
-_launchURLTwitter() async {
-  const url = 'https://twitter.com/?lang=tr';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
-
-_launchURLYoutube() async {
-  const url = 'https://www.youtube.com/';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
 }
 
 class _SepetState extends State<Sepet> {
@@ -721,7 +683,9 @@ class _SepetState extends State<Sepet> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Adres(kullanici: widget.kullanici,)),
+                                            builder: (context) => Adres(
+                                                  kullanici: widget.kullanici,
+                                                )),
                                       );
                                     },
                                     child: Text(

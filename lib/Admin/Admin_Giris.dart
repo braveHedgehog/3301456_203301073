@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:hayvan_dostu/main.dart';
 import 'package:hayvan_dostu/Admin/Admin_Main.dart';
-import 'package:hayvan_dostu/Admin/Admin_Giris.dart';
-class GirisYap extends StatefulWidget {
+import 'package:hayvan_dostu/girisYap.dart';
+import 'package:hayvan_dostu/main.dart';
+
+class Admin_giris extends StatefulWidget {
+  const Admin_giris({Key? key}) : super(key: key);
+
+
   @override
-  State<GirisYap> createState() => _GirisYapState();
+  State<Admin_giris> createState() => _Admin_girisState();
 }
 
-class _GirisYapState extends State<GirisYap> {
+class _Admin_girisState extends State<Admin_giris> {
   TextEditingController kullaniciAl = new TextEditingController();
   TextEditingController sifreAl = new TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -46,7 +48,7 @@ class _GirisYapState extends State<GirisYap> {
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(15.0)),
+                          const BorderRadius.all(Radius.circular(15.0)),
                         ),
                         labelText: 'Kullanıcı Adınız',
                         labelStyle: new TextStyle(
@@ -69,7 +71,7 @@ class _GirisYapState extends State<GirisYap> {
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius:
-                              const BorderRadius.all(Radius.circular(15.0)),
+                          const BorderRadius.all(Radius.circular(15.0)),
                         ),
                         labelText: 'Şifreniz',
                         labelStyle: new TextStyle(
@@ -125,9 +127,7 @@ class _GirisYapState extends State<GirisYap> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => HayvanDostu(
-                                                kullanici: kullaniciAl.text,
-                                              )),
+                                          builder: (context) => AdminMain()),
                                     );
                                   },
                                   child: const Text(
@@ -173,11 +173,11 @@ class _GirisYapState extends State<GirisYap> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Admin_giris()),
+                          MaterialPageRoute(builder: (context) => GirisYap()),
                         );
                       },
                       child: Text(
-                        'Admin Giriş',
+                        'Kullanıcı Giriş Sayfası',
                         style: TextStyle(fontSize: 25),
                       ),
                     ),

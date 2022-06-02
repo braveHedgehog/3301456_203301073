@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hayvan_dostu/girisYap.dart';
 import 'package:hayvan_dostu/Sepet.dart';
 import 'package:hayvan_dostu/Profil.dart';
+import 'package:hayvan_dostu/UyeOl.dart';
 import 'dart:math';
 
 class Urun extends StatefulWidget {
@@ -357,6 +358,21 @@ class _UrunState extends State<Urun> {
                   },
                   child: Text(
                     'Giriş Yap',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                FlatButton(
+                  //color: Colors.orange,
+                  hoverColor: Colors.indigo[600],
+                  highlightColor: Colors.indigo[600],
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UyeOl()),
+                    );
+                  },
+                  child: Text(
+                    'Üye Ol',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -1064,6 +1080,21 @@ class _UrunState extends State<Urun> {
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
+                FlatButton(
+                  //color: Colors.orange,
+                  hoverColor: Colors.indigo[600],
+                  highlightColor: Colors.indigo[600],
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UyeOl()),
+                    );
+                  },
+                  child: Text(
+                    'Üye Ol',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
                 IconButton(
                   onPressed: () {
                     Navigator.push(
@@ -1759,6 +1790,21 @@ class _UrunState extends State<Urun> {
                   },
                   child: Text(
                     'Giriş Yap',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                FlatButton(
+                  //color: Colors.orange,
+                  hoverColor: Colors.indigo[600],
+                  highlightColor: Colors.indigo[600],
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UyeOl()),
+                    );
+                  },
+                  child: Text(
+                    'Üye Ol',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),

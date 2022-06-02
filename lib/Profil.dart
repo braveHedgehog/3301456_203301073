@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hayvan_dostu/Profil_Duzenle.dart';
 import 'package:hayvan_dostu/main.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:hayvan_dostu/UrunDetay.dart';
-import 'package:hayvan_dostu/Sepet.dart';
 
 
 class Profil extends StatefulWidget {
@@ -472,44 +472,21 @@ class _ProfilState extends State<Profil> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 80.0),
-                  child: SizedBox(
-                    width: double.infinity,
-                    //height: 202,
-                    child: Card(
-                      color: Colors.white,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          IconButton(
-                            onPressed: _launchURLFace,
-                            icon: const FaIcon(
-                              FontAwesomeIcons.facebook,
-                              size: 12,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: _launchURLInsta,
-                            icon: const FaIcon(
-                              FontAwesomeIcons.instagram,
-                              size: 12,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: _launchURLTwitter,
-                            icon: const FaIcon(
-                              FontAwesomeIcons.twitter,
-                              size: 12,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: _launchURLYoutube,
-                            icon: const FaIcon(
-                              FontAwesomeIcons.youtube,
-                              size: 12,
-                            ),
-                          ),
-                        ],
-                      ),
+                  child:  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.green,
+                      onPrimary: Colors.white,
+                      padding: EdgeInsets.all(12),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ProfilDuzen()),
+                      );
+                    },
+                    child: Text(
+                      'Profil Düzenle',
+                      style: TextStyle(fontSize: 25),
                     ),
                   ),
                 ),
@@ -786,44 +763,21 @@ class _ProfilState extends State<Profil> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 80.0),
-                  child: SizedBox(
-                    width: double.infinity,
-                    //height: 102,
-                    child: Card(
-                      color: Colors.white,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          IconButton(
-                            onPressed: _launchURLFace,
-                            icon: const FaIcon(
-                              FontAwesomeIcons.facebook,
-                              size: 12,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: _launchURLInsta,
-                            icon: const FaIcon(
-                              FontAwesomeIcons.instagram,
-                              size: 12,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: _launchURLTwitter,
-                            icon: const FaIcon(
-                              FontAwesomeIcons.twitter,
-                              size: 12,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: _launchURLYoutube,
-                            icon: const FaIcon(
-                              FontAwesomeIcons.youtube,
-                              size: 12,
-                            ),
-                          ),
-                        ],
-                      ),
+                  child:  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.green,
+                      onPrimary: Colors.white,
+                      padding: EdgeInsets.all(12),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ProfilDuzen()),
+                      );
+                    },
+                    child: Text(
+                      'Profil Düzenle',
+                      style: TextStyle(fontSize: 25),
                     ),
                   ),
                 ),

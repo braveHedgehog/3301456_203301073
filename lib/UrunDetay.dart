@@ -3,6 +3,7 @@ import 'package:hayvan_dostu/main.dart';
 import 'package:hayvan_dostu/Sepet.dart';
 import 'package:hayvan_dostu/girisYap.dart';
 import 'package:hayvan_dostu/Profil.dart';
+import 'package:hayvan_dostu/UyeOl.dart';
 
 
 class UrunDetay extends StatefulWidget {
@@ -46,6 +47,21 @@ class _UrunDetayState extends State<UrunDetay> {
                 },
                 child: Text(
                   'Giriş Yap',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              FlatButton(
+                //color: Colors.orange,
+                hoverColor: Colors.indigo[600],
+                highlightColor: Colors.indigo[600],
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UyeOl()),
+                  );
+                },
+                child: Text(
+                  'Üye Ol',
                   style: TextStyle(color: Colors.white),
                 ),
               ),
